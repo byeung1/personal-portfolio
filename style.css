@@ -27,3 +27,62 @@ nav a {
 nav a:hover {
     color: #aaaaaa;
 }
+
+#home {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+#home h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 22px;
+    color: #bbbbbb;
+    max-width: 650px;
+    line-height: 1.6;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.home-buttons a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.home-buttons a:first-child {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.home-buttons a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.home-buttons a:first-child:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
