@@ -5,3 +5,10 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+main section {
+    scroll-margin-top: 80px;
+}

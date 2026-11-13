@@ -1,7 +1,13 @@
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #000000;
     padding: 20px 40px;
-    border-bottom: 1px solid #333333
+    border-bottom: 1px solid #333333;
 }
+
 
 nav {
     display: flex;
@@ -11,7 +17,7 @@ nav {
 }
 
 nav a {
-    color: #ffffff;
+    color: #aaaaaa;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
@@ -21,3 +27,8 @@ nav a:hover {
     color: #aaaaaa;
 }
 
+nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
