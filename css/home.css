@@ -57,3 +57,13 @@
     color: #000000;
 }
 
+.home-buttons .resume-button {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.home-buttons .resume-button:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
