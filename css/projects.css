@@ -10,3 +10,14 @@
 .project-card a::after { content: '↗'; color: var(--accent); font-size: 18px; }
 .project-card a:hover { color: var(--accent); }
 @media (max-width: 700px) { .projects-container { grid-template-columns: 1fr; } .project-card { padding: 26px; } }
+
+.project-gallery { margin-bottom: 24px; min-width: 0; }
+.project-slides { aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: #000; display: grid; place-items: center; }
+.project-slides img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.project-slides img[hidden] { display: none; }
+.gallery-controls { display: flex; justify-content: center; align-items: center; gap: 4px; margin-top: 8px; }
+.gallery-controls button { border: 0; background: transparent; color: var(--muted); cursor: pointer; font: inherit; font-size: 11px; min-width: 32px; min-height: 32px; border-radius: 4px; }
+.gallery-dot { position: relative; font-size: 0 !important; }
+.gallery-dot::after { content: ''; display: block; width: 7px; height: 7px; margin: auto; border-radius: 50%; background: var(--muted); }
+.gallery-dot[aria-pressed="true"]::after { background: var(--accent); }
+.gallery-controls button:hover { color: var(--accent); background: var(--soft); }
