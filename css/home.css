@@ -6,9 +6,11 @@
 #home p { max-width: 570px; margin-bottom: 18px; color: var(--muted); font-size: 17px; }
 .home-buttons { display: flex; align-items: center; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
 .home-buttons a { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 11px 19px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; transition: background .2s, border-color .2s, transform .2s; background: var(--surface); }
-.home-buttons a:first-child { background: var(--accent); color: white; border-color: var(--accent); }
+.home-buttons a:first-child { background: var(--button-bg); color: var(--on-button); border-color: var(--button-bg); }
 .home-buttons a::after { content: '↗'; font-size: 16px; }
 .home-buttons a:first-child::after { content: '↓'; }
 .home-buttons a:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--soft); }
-.home-buttons a:first-child:hover { background: #194936; }
+.home-buttons a:first-child:hover { background: var(--button-hover); }
 @media (max-width: 640px) { #home { min-height: auto; padding-top: 80px; padding-bottom: 84px; } #home h1 { letter-spacing: -2px; } #home::after { opacity: .5; right: -290px; } .home-buttons { gap: 10px; } }
+
+[data-theme="dark"] #home::after { border-color: var(--line); box-shadow: 0 0 0 42px var(--bg), 0 0 0 43px var(--line), 0 0 0 85px var(--bg), 0 0 0 86px var(--line); }

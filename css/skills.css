@@ -1,5 +1,5 @@
 .skills-container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-.skill-category { min-width: 0; border-top: 2px solid #b5c8b5; padding-top: 24px; }
+.skill-category { min-width: 0; border-top: 2px solid var(--line); padding-top: 24px; }
 .skill-category h3 { font-size: 16px; margin-bottom: 24px; }
 .skill-list { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 9px; }
 .skill-list li { background: var(--surface); border: 1px solid var(--line); padding: 6px 12px; border-radius: 5px; font-size: 12px; color: var(--muted); }
