@@ -1,27 +1,35 @@
 (() => {
     const root = document.documentElement;
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    let preference = "system";
+
     try {
-        root.dataset.theme = localStorage.getItem("theme") === "light" ? "light" : "dark";
+        const saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") preference = saved;
     } catch {
-        root.dataset.theme = "dark";
+        // Use the system setting when browser storage is unavailable.
     }
+
+    function applyTheme() {
+        root.dataset.theme = preference === "system"
+            ? (systemTheme.matches ? "dark" : "light")
+            : preference;
+    }
+
+    applyTheme();
+    systemTheme.addEventListener("change", applyTheme);
 
     document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.querySelector(".theme-toggle");
-        function updateToggle() {
-            const dark = root.dataset.theme === "dark";
-            toggle.setAttribute("aria-pressed", String(dark));
-            toggle.title = dark ? "Switch to light mode" : "Switch to dark mode";
-        }
-        updateToggle();
-        toggle.addEventListener("click", () => {
-            root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+        toggle.value = preference;
+        toggle.addEventListener("change", () => {
+            preference = toggle.value;
+            applyTheme();
             try {
-                localStorage.setItem("theme", root.dataset.theme);
+                localStorage.setItem("theme", preference);
             } catch {
-                // The toggle still works when browser storage is unavailable.
+                // Manual selection still works without browser storage.
             }
-            updateToggle();
         });
     });
 })();

@@ -8,12 +8,8 @@ nav a:hover, nav a.active { color: var(--accent); }
 nav a.active::after { content: ''; position: absolute; bottom: 18px; left: 0; right: 0; height: 2px; background: var(--accent); }
 @media (max-width: 760px) { .header-inner { flex-direction: column; gap: 0; padding: 14px 24px 0; } nav { width: 100%; justify-content: center; gap: clamp(12px, 3vw, 24px); } nav a { padding: 12px 0 16px; font-size: 12px; } nav a.active::after { bottom: 7px; } }
 
-.theme-toggle { flex-shrink: 0; display: grid; place-items: center; width: 40px; height: 40px; padding: 9px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--accent); cursor: pointer; transition: background .2s, border-color .2s; }
+.theme-toggle { flex-shrink: 0; min-height: 40px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--accent); font: inherit; font-size: 12px; cursor: pointer; transition: background .2s, border-color .2s; }
 .theme-toggle:hover { background: var(--soft); border-color: var(--accent); }
-.theme-toggle svg { width: 20px; height: 20px; }
-.sun-icon { display: none; }
-[data-theme="dark"] .sun-icon { display: block; }
-[data-theme="dark"] .moon-icon { display: none; }
 @media (max-width: 760px) {
     .header-inner { display: grid; grid-template-columns: 1fr auto; gap: 0 16px; }
     .theme-toggle { grid-column: 2; grid-row: 1; }

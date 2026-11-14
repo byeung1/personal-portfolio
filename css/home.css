@@ -1,5 +1,5 @@
 #home { position: relative; min-height: 650px; padding-top: 120px; padding-bottom: 112px; overflow: hidden; }
-#home::after { content: ''; position: absolute; width: 340px; height: 340px; right: -160px; top: 120px; border: 1px solid #d7e1d2; border-radius: 50%; box-shadow: 0 0 0 42px var(--bg), 0 0 0 43px #e1e8db, 0 0 0 85px var(--bg), 0 0 0 86px #e9ede4; z-index: -1; }
+#home::after { content: ''; position: absolute; width: 340px; height: 340px; right: -160px; top: 120px; border: 1px solid var(--line); border-radius: 50%; box-shadow: 0 0 0 42px var(--bg), 0 0 0 43px var(--line), 0 0 0 85px var(--bg), 0 0 0 86px var(--line); z-index: -1; }
 #home h1 { max-width: 850px; font-size: clamp(44px, 7vw, 78px); font-weight: 800; letter-spacing: -4px; margin-bottom: 22px; }
 #home h1 span { color: var(--accent); }
 #home .home-role { font-size: clamp(19px, 2.5vw, 25px); font-weight: 500; color: var(--ink); max-width: 580px; line-height: 1.5; }

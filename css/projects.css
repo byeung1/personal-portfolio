@@ -1,7 +1,7 @@
 .projects-container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; counter-reset: project; }
 .project-card { display: flex; flex-direction: column; padding: 34px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; transition: transform .2s, box-shadow .2s; counter-increment: project; }
 .project-card::before { content: 'PROJECT / 0' counter(project); font-size: 11px; font-weight: 600; letter-spacing: 1.7px; color: var(--accent); margin-bottom: 40px; }
-.project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px #192e290a; }
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px #2563eb14; }
 .project-card h3 { font-size: 24px; margin-bottom: 18px; }
 .project-card p { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
 .project-technologies { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
