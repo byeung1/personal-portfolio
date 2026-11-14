@@ -1,14 +1,29 @@
-body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: "Times New Roman", Times, serif;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap');
 
-html {
-    scroll-behavior: smooth;
+:root {
+    --bg: #f8f9f5;
+    --surface: #ffffff;
+    --ink: #192e29;
+    --muted: #586761;
+    --accent: #25634f;
+    --line: #dce3da;
+    --soft: #edf2e9;
 }
-
-main section {
-    scroll-margin-top: 80px;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+::selection { background: #cee1cd; color: var(--ink); }
+a { color: inherit; text-underline-offset: 5px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { font-family: 'Manrope', sans-serif; line-height: 1.25; }
+h2 { font-size: clamp(30px, 4vw, 42px); font-weight: 750; letter-spacing: -1.5px; margin-bottom: 14px; }
+h3 { font-size: 21px; font-weight: 700; letter-spacing: -.5px; }
+main section { max-width: 1120px; margin: 0 auto; padding: 96px 32px; scroll-margin-top: 86px; }
+main section + section { border-top: 1px solid var(--line); }
+.experience-intro, .projects-intro, .skills-intro, .contact-intro { color: var(--muted); margin-bottom: 42px; }
+.section-label, .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+.skip-link { position: fixed; top: -80px; left: 20px; z-index: 2000; padding: 10px 20px; background: var(--ink); color: white; }
+.skip-link:focus { top: 12px; }
+@media (max-width: 640px) { main section { padding: 64px 24px; scroll-margin-top: 118px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
