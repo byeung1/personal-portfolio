@@ -46,3 +46,20 @@ main section + section { border-top: 1px solid var(--line); }
 .skip-link:focus { top: 12px; }
 @media (max-width: 640px) { main section { padding: 64px 24px; scroll-margin-top: 118px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* Draw arrows with CSS so mobile platforms cannot substitute emoji glyphs. */
+.home-buttons a::after,
+.about-interests li::before,
+.project-card a::after,
+.contact-links a::after {
+    content: '';
+    display: inline-block;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    background: currentColor;
+    clip-path: polygon(0 44%, 76% 44%, 48% 16%, 56% 8%, 100% 50%, 56% 92%, 48% 84%, 76% 56%, 0 56%);
+    transform: rotate(-45deg);
+    vertical-align: middle;
+}
+.contact-links a::after { margin-left: 5px; }

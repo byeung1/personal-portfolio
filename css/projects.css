@@ -7,7 +7,7 @@
 .project-technologies { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
 .project-technologies span { font-size: 11px; color: var(--accent); background: var(--soft); padding: 4px 10px; border-radius: 4px; font-weight: 500; }
 .project-card a { display: flex; justify-content: space-between; text-decoration: none; font-size: 13px; font-weight: 600; border-top: 1px solid var(--line); padding-top: 20px; margin-top: auto; }
-.project-card a::after { content: '↗'; color: var(--accent); font-size: 18px; }
+.project-card a::after { content: ''; color: var(--accent); font-size: 18px; }
 .project-card a:hover { color: var(--accent); }
 @media (max-width: 700px) { .projects-container { grid-template-columns: 1fr; } .project-card { padding: 26px; } }
 
